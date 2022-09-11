@@ -15,16 +15,20 @@ struct ContentView: View {
         NavigationView {
             TabView {
                 VStack {
+                    if editButton == false {
 
-                    Spacer()
+                        Spacer()
 
-                    Text("Ищите свою музыку?")
-                        .font(.system(size: 25, weight: .bold, design: .default))
-                        .padding()
-                    Text("Здесь появится купленная Вами в Itunes музыка.")
-                        .multilineTextAlignment(.center)
-                        .font(.callout)
-                        .foregroundColor(.gray)
+                        Text("Ищите свою музыку?")
+                            .font(.system(size: 25, weight: .bold, design: .default))
+                            .padding(0.1)
+                        Text("Здесь появится купленная Вами в ITunes Store музыка.")
+                            .multilineTextAlignment(.center)
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+                    } else {
+                        EditScreen()
+                    }
 
                     Spacer()
 
@@ -35,8 +39,8 @@ struct ContentView: View {
                             .cornerRadius(10)
                             .shadow(radius: 20)
                         Text("Mr. Morale")
-                                .font(.title2)
-                                .padding()
+                            .font(.title2)
+                            .padding()
 
                         Spacer()
 
@@ -61,26 +65,31 @@ struct ContentView: View {
                     }
                 } .padding(10)
 
-            .tabItem {
-                Text("Медиатека")
-                Image(systemName: "music.note.tv.fill")
+                    .tabItem {
+                        Text("Медиатека")
+                        Image(systemName: "music.note.tv.fill")
+                    }
+                Text("Радио")
+                    .tabItem {
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
+                Text("Поиск")
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                    }
             }
-            Text("Радио")
-                .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                    Text("Радио")
-                }
-            Text("Поиск")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
-        }
             .navigationTitle("Медиатека")
             .accentColor(.red)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-//                    Button(action: self, label: "Править")
+                    Button(action: {
+                        self.editButton.toggle()
+                    }) {
+                        editButton ? Text("Готово") : Text("Править")
+                    .foregroundColor(.red)
+                    }
                 }
             }
         }
