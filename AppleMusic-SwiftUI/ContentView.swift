@@ -83,14 +83,16 @@ struct ContentView: View {
             .navigationTitle("Медиатека")
             .accentColor(.red)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        self.editButton.toggle()
-                    }) {
-                        editButton ? Text("Готово") : Text("Править")
-                    .foregroundColor(.red)
+                    Button {
+                        editButton.toggle()
+                    } label: {
+                        if editButton {
+                            Text("Готово")
+                        } else {
+                            Text("Править")
+                        }
                     }
-                }
+                    .foregroundColor(.red)
             }
         }
     }
