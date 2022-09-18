@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditScreen: View {
-    @State var cells: [Cell] = Catalogue.items
+    @State var cells: [Row] = libraryCatalogue.items
     @State private var selectedCells = Set<UUID>()
 
     var body: some View {
@@ -24,9 +24,18 @@ struct EditScreen: View {
                 .onMove(perform: moveItem)
             }
             .environment(\.editMode, Binding.constant(EditMode.active))
+            .listStyle(.plain)
         }
+
     }
     func moveItem(from source: IndexSet, to destination: Int) {
         cells.move(fromOffsets: source, toOffset: destination)
     }
 }
+
+struct EEditScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        EditScreen()
+    }
+}
+
