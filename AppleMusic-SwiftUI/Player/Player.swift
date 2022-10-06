@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Player: View {
+    @State var isShowed: Bool
+
     var body: some View {
         HStack {
             Image("cover")
@@ -41,12 +43,35 @@ struct Player: View {
                     .padding(.trailing, 10)
             }
         }
-        .background(.white)
+        .onTapGesture(count: 2) {
+            isShowed = true
+        }
+        .sheet(isPresented: $isShowed, content: {
+            PlayerFullScreen()
+        })
+
+        .frame(maxHeight: 80)
+        .frame(width: UIScreen.main.bounds.width)
+        .background(
+            VStack(spacing: 0) {
+                BlurEffect(style: .systemChromeMaterial)
+            })
+    }
+    struct BlurEffect: UIViewRepresentable {
+        var style: UIBlurEffect.Style = .systemMaterial
+
+        func makeUIView(context: Context) -> UIVisualEffectView {
+            return UIVisualEffectView(effect: UIBlurEffect(style: style))
+        }
+
+        func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+            uiView.effect = UIBlurEffect(style: style)
+        }
     }
 }
 
 struct Player_Previews: PreviewProvider {
     static var previews: some View {
-        Player()
+        Player(isShowed: false)
     }
 }
