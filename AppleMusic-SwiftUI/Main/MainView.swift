@@ -21,7 +21,7 @@ struct MainView: View {
                         Image(systemName: "dot.radiowaves.left.and.right")
                         Text("Радио")
                     }
-                Text("Поиск")
+                SearchView()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Поиск")
@@ -29,8 +29,8 @@ struct MainView: View {
             }
             .accentColor(.red)
 
-            Player()
-                .offset(y: 305)
+            Player(isShowed: false)
+                .offset(y: 295)
         }
     }
 }
