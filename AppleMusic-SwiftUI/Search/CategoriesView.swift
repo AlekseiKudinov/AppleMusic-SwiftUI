@@ -10,14 +10,15 @@ import SwiftUI
 struct CategoriesView: View {
     var column = [GridItem(.adaptive(minimum: 150))]
 
-    @StateObject var categories: AllCategoriesObservable = AllCategoriesObservable()
+    @StateObject var categories = AllCategoriesObservable()
     @State var searchCategory = ""
 
     var filteredCategories: [CategoryModel] {
         if searchCategory.isEmpty {
             return categories.allCategories
         } else {
-            return categories.allCategories.filter { $0.title!.localizedCaseInsensitiveContains(searchCategory)}
+            return categories.allCategories.filter { $0.title?.localizedCaseInsensitiveContains(searchCategory) ?? true
+            }
         }
     }
 
@@ -27,7 +28,7 @@ struct CategoriesView: View {
                 ForEach(filteredCategories, id: \.id) { category in
                     NavigationLink {
                         DetailCategoryGrid(category: category)
-                            .navigationBarBackButtonHidden()
+                            .navigationBarBackButtonHidden(true)
                     } label: {
                         VStack {
                             Image(category.imageName ?? "")

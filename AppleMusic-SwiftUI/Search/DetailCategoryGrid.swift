@@ -24,7 +24,7 @@ struct DetailCategoryGrid: View {
         if searchText.isEmpty {
             return songs
         } else {
-            return songs.filter { $0.songTitle!.localizedCaseInsensitiveContains(searchText) || $0.album!.localizedCaseInsensitiveContains(searchText) || $0.musician!.localizedCaseInsensitiveContains(searchText)}
+            return songs.filter { $0.songTitle?.localizedCaseInsensitiveContains(searchText) ?? true || $0.album?.localizedCaseInsensitiveContains(searchText) ?? true || $0.musician?.localizedCaseInsensitiveContains(searchText) ?? true}
         }
     }
 

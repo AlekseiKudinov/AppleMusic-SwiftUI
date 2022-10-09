@@ -49,115 +49,6 @@ struct SwiftUIView_Previews: PreviewProvider {
     }
 }
 
-
-struct PlayButtonsView: View {
-
-    var body: some View {
-        HStack {
-            Button {
-                print("tapped")
-            } label: {
-                Image(systemName: "backward.fill")
-                    .font(.system(size: 35))
-                    .foregroundColor(.black)
-                    .buttonStyle(.plain)
-                    .padding(.trailing, 40)
-            }
-
-            Button {
-                print("tapped")
-            } label: {
-                Image(systemName: "play.fill")
-                    .font(.system(size: 40))
-                    .foregroundColor(.black)
-                    .buttonStyle(.plain)
-                    .padding(.trailing, 40)
-            }
-            Button {
-                print("tapped")
-            } label: {
-                Image(systemName: "forward.fill")
-                    .font(.system(size: 35))
-                    .foregroundColor(.black)
-                    .buttonStyle(.plain)
-                    .padding(.trailing, 10)
-            }
-        }
-    }
-}
-
-
-struct BottomBattonsView: View {
-
-    var body: some View {
-        HStack(content: {
-            Button {
-                print("tapped")
-            } label: {
-                Image(systemName: "quote.bubble")
-                    .font(.system(size: 20))
-                    .foregroundColor(.black)
-                    .buttonStyle(.plain)
-                    .padding(.trailing, 10)
-            }
-
-            Button {
-                print("tapped")
-            } label: {
-                Image(systemName: "airplayaudio")
-                    .font(.system(size: 20))
-                    .foregroundColor(.black)
-                    .buttonStyle(.plain)
-                    .padding(.trailing, 80)
-                    .padding(.leading, 80)
-            }
-
-            Button {
-                print("tapped")
-            } label: {
-                Image(systemName: "list.dash")
-                    .font(.system(size: 20))
-                    .foregroundColor(.black)
-                    .buttonStyle(.plain)
-                    .padding(.trailing, 10)
-            }
-        })
-
-    }
-}
-
-struct MusicDurationView: View {
-    var body: some View {
-        Rectangle()
-            .frame(width: (UIScreen.main.bounds.width) - 60, height: 3)
-            .foregroundColor(.gray)
-        Circle()
-            .frame(width: 10, height: 10)
-            .foregroundColor(.gray)
-            .padding(.top, -14)
-            .padding(.trailing, (UIScreen.main.bounds.width) - 60)
-    }
-}
-
-struct VolumeView: View {
-
-    @State var sliderValue: Double = 5
-
-    var body: some View {
-        HStack {
-            Image(systemName: "speaker.fill")
-                .foregroundColor(.gray)
-                .padding(.leading, 40)
-            Slider(value: $sliderValue)
-                .accentColor(.gray)
-            Image(systemName: "speaker.wave.3.fill")
-                .foregroundColor(.gray)
-                .padding(.trailing, 30)
-        }
-    }
-}
-
-
 struct BottomView: View {
     var body: some View {
         MusicDurationView()
@@ -166,6 +57,6 @@ struct BottomView: View {
         Spacer()
         VolumeView()
         Spacer()
-        BottomBattonsView()
+        BottomButtonsView()
     }
 }

@@ -24,8 +24,7 @@ class AllCategoriesObservable: ObservableObject {
      CategoryModel(title: "Поп", subtitle: "Категория", imageName: "US Pop"),
      CategoryModel(title: "Хиты", subtitle: "Категория", imageName: "US Hits"),
      CategoryModel(title: "Хорошее настроение", subtitle: "Категория", imageName: "Good mood"),
-     CategoryModel(title: "Хиты на русском", subtitle: "Категория", imageName: "Russian Hits"),
-
+     CategoryModel(title: "Хиты на русском", subtitle: "Категория", imageName: "Russian Hits")
     ]
 }
 

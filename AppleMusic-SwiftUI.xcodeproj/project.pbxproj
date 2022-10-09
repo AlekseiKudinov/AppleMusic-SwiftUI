@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B030CFBC28F373310059A49A /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFBB28F373310059A49A /* Blur.swift */; };
+		B030CFBE28F376B20059A49A /* PlayButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFBD28F376B20059A49A /* PlayButtons.swift */; };
+		B030CFC128F377250059A49A /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC028F377250059A49A /* BottomButtons.swift */; };
+		B030CFC328F3777D0059A49A /* TrackSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC228F3777D0059A49A /* TrackSlider.swift */; };
+		B030CFC528F377A30059A49A /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC428F377A30059A49A /* VolumeSlider.swift */; };
 		B034DA2128CE26EB0062492F /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034DA2028CE26EB0062492F /* LibraryModel.swift */; };
 		B034DA2328CE27130062492F /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034DA2228CE27130062492F /* EditScreen.swift */; };
 		B034DA2528CE849E0062492F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034DA2428CE849E0062492F /* MainView.swift */; };
@@ -29,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B030CFBB28F373310059A49A /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		B030CFBD28F376B20059A49A /* PlayButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtons.swift; sourceTree = "<group>"; };
+		B030CFC028F377250059A49A /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
+		B030CFC228F3777D0059A49A /* TrackSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSlider.swift; sourceTree = "<group>"; };
+		B030CFC428F377A30059A49A /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
 		B034DA2028CE26EB0062492F /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
 		B034DA2228CE27130062492F /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
 		B034DA2428CE849E0062492F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -62,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B030CFBF28F377080059A49A /* Buttons & Sliders */ = {
+			isa = PBXGroup;
+			children = (
+				B030CFBD28F376B20059A49A /* PlayButtons.swift */,
+				B030CFC028F377250059A49A /* BottomButtons.swift */,
+				B030CFC228F3777D0059A49A /* TrackSlider.swift */,
+				B030CFC428F377A30059A49A /* VolumeSlider.swift */,
+			);
+			path = "Buttons & Sliders";
+			sourceTree = "<group>";
+		};
 		B05607F828D7329D005043EF /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,8 +94,10 @@
 		B05607F928D732BA005043EF /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				B030CFBF28F377080059A49A /* Buttons & Sliders */,
 				B034DA2628CE859B0062492F /* Player.swift */,
 				B092A70E28EB921D0032104D /* PlayerFullScreen.swift */,
+				B030CFBB28F373310059A49A /* Blur.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -240,12 +263,16 @@
 			files = (
 				B065BBE628CA7B8A00CDFB0B /* Library.swift in Sources */,
 				B034DA2928CE88940062492F /* RadioView.swift in Sources */,
+				B030CFBE28F376B20059A49A /* PlayButtons.swift in Sources */,
 				B034DA2328CE27130062492F /* EditScreen.swift in Sources */,
+				B030CFC528F377A30059A49A /* VolumeSlider.swift in Sources */,
 				B034DA3128CE8A730062492F /* RadioCollectionsModel.swift in Sources */,
 				B092A71928EB956A0032104D /* DetailCategoryGrid.swift in Sources */,
 				B065BBE428CA7B8A00CDFB0B /* AppleMusic_SwiftUIApp.swift in Sources */,
 				B034DA2528CE849E0062492F /* MainView.swift in Sources */,
 				B034DA2728CE859B0062492F /* Player.swift in Sources */,
+				B030CFBC28F373310059A49A /* Blur.swift in Sources */,
+				B030CFC128F377250059A49A /* BottomButtons.swift in Sources */,
 				B092A71728EB953A0032104D /* CategoriesModel.swift in Sources */,
 				B034DA2F28CE8A640062492F /* RadioStationsModel.swift in Sources */,
 				B092A71528EB94F80032104D /* CategoriesView.swift in Sources */,
@@ -254,6 +281,7 @@
 				B092A71328EB92AD0032104D /* SongModel.swift in Sources */,
 				B092A70F28EB921D0032104D /* PlayerFullScreen.swift in Sources */,
 				B034DA2B28CE89FB0062492F /* RadioCollections.swift in Sources */,
+				B030CFC328F3777D0059A49A /* TrackSlider.swift in Sources */,
 				B034DA2D28CE8A110062492F /* RadioStations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
