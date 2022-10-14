@@ -26,6 +26,11 @@ struct MainView: View {
                         Image(systemName: "magnifyingglass")
                         Text("Поиск")
                     }
+                SearchViewUIKit()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("ПоискUIKit")
+                    }
             }
             .accentColor(.red)
 

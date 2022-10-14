@@ -12,6 +12,12 @@
 		B030CFC128F377250059A49A /* BottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC028F377250059A49A /* BottomButtons.swift */; };
 		B030CFC328F3777D0059A49A /* TrackSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC228F3777D0059A49A /* TrackSlider.swift */; };
 		B030CFC528F377A30059A49A /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC428F377A30059A49A /* VolumeSlider.swift */; };
+		B030CFC828F385290059A49A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC728F385290059A49A /* SearchViewController.swift */; };
+		B030CFCA28F385990059A49A /* SearchUIKitViewToSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFC928F385990059A49A /* SearchUIKitViewToSwiftUI.swift */; };
+		B030CFCC28F386480059A49A /* SearchUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFCB28F386480059A49A /* SearchUIKit.swift */; };
+		B030CFD128F386ED0059A49A /* RadiostationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFD028F386ED0059A49A /* RadiostationCell.swift */; };
+		B030CFD428F387490059A49A /* RadioImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFD328F387490059A49A /* RadioImage.swift */; };
+		B030CFD628F38A530059A49A /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B030CFD528F38A530059A49A /* CollectionLayout.swift */; };
 		B034DA2128CE26EB0062492F /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034DA2028CE26EB0062492F /* LibraryModel.swift */; };
 		B034DA2328CE27130062492F /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034DA2228CE27130062492F /* EditScreen.swift */; };
 		B034DA2528CE849E0062492F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B034DA2428CE849E0062492F /* MainView.swift */; };
@@ -39,6 +45,12 @@
 		B030CFC028F377250059A49A /* BottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButtons.swift; sourceTree = "<group>"; };
 		B030CFC228F3777D0059A49A /* TrackSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackSlider.swift; sourceTree = "<group>"; };
 		B030CFC428F377A30059A49A /* VolumeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
+		B030CFC728F385290059A49A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B030CFC928F385990059A49A /* SearchUIKitViewToSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIKitViewToSwiftUI.swift; sourceTree = "<group>"; };
+		B030CFCB28F386480059A49A /* SearchUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUIKit.swift; sourceTree = "<group>"; };
+		B030CFD028F386ED0059A49A /* RadiostationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiostationCell.swift; sourceTree = "<group>"; };
+		B030CFD328F387490059A49A /* RadioImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioImage.swift; sourceTree = "<group>"; };
+		B030CFD528F38A530059A49A /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
 		B034DA2028CE26EB0062492F /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
 		B034DA2228CE27130062492F /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
 		B034DA2428CE849E0062492F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -81,6 +93,35 @@
 				B030CFC428F377A30059A49A /* VolumeSlider.swift */,
 			);
 			path = "Buttons & Sliders";
+			sourceTree = "<group>";
+		};
+		B030CFC628F383EA0059A49A /* SearchUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B030CFD228F387290059A49A /* CustomUIElement */,
+				B030CFC728F385290059A49A /* SearchViewController.swift */,
+				B030CFC928F385990059A49A /* SearchUIKitViewToSwiftUI.swift */,
+				B030CFCB28F386480059A49A /* SearchUIKit.swift */,
+				B030CFCF28F386CD0059A49A /* Cell */,
+				B030CFD528F38A530059A49A /* CollectionLayout.swift */,
+			);
+			path = SearchUIKit;
+			sourceTree = "<group>";
+		};
+		B030CFCF28F386CD0059A49A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B030CFD028F386ED0059A49A /* RadiostationCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B030CFD228F387290059A49A /* CustomUIElement */ = {
+			isa = PBXGroup;
+			children = (
+				B030CFD328F387490059A49A /* RadioImage.swift */,
+			);
+			path = CustomUIElement;
 			sourceTree = "<group>";
 		};
 		B05607F828D7329D005043EF /* Main */ = {
@@ -159,6 +200,7 @@
 		B065BBE228CA7B8A00CDFB0B /* AppleMusic-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B030CFC628F383EA0059A49A /* SearchUIKit */,
 				B065BBE328CA7B8A00CDFB0B /* AppleMusic_SwiftUIApp.swift */,
 				B05607F828D7329D005043EF /* Main */,
 				B05607FA28D732CD005043EF /* Library */,
@@ -264,19 +306,25 @@
 				B065BBE628CA7B8A00CDFB0B /* Library.swift in Sources */,
 				B034DA2928CE88940062492F /* RadioView.swift in Sources */,
 				B030CFBE28F376B20059A49A /* PlayButtons.swift in Sources */,
+				B030CFD628F38A530059A49A /* CollectionLayout.swift in Sources */,
 				B034DA2328CE27130062492F /* EditScreen.swift in Sources */,
 				B030CFC528F377A30059A49A /* VolumeSlider.swift in Sources */,
 				B034DA3128CE8A730062492F /* RadioCollectionsModel.swift in Sources */,
+				B030CFD128F386ED0059A49A /* RadiostationCell.swift in Sources */,
 				B092A71928EB956A0032104D /* DetailCategoryGrid.swift in Sources */,
 				B065BBE428CA7B8A00CDFB0B /* AppleMusic_SwiftUIApp.swift in Sources */,
 				B034DA2528CE849E0062492F /* MainView.swift in Sources */,
 				B034DA2728CE859B0062492F /* Player.swift in Sources */,
 				B030CFBC28F373310059A49A /* Blur.swift in Sources */,
+				B030CFCC28F386480059A49A /* SearchUIKit.swift in Sources */,
 				B030CFC128F377250059A49A /* BottomButtons.swift in Sources */,
 				B092A71728EB953A0032104D /* CategoriesModel.swift in Sources */,
+				B030CFC828F385290059A49A /* SearchViewController.swift in Sources */,
+				B030CFCA28F385990059A49A /* SearchUIKitViewToSwiftUI.swift in Sources */,
 				B034DA2F28CE8A640062492F /* RadioStationsModel.swift in Sources */,
 				B092A71528EB94F80032104D /* CategoriesView.swift in Sources */,
 				B092A71128EB92440032104D /* SearchView.swift in Sources */,
+				B030CFD428F387490059A49A /* RadioImage.swift in Sources */,
 				B034DA2128CE26EB0062492F /* LibraryModel.swift in Sources */,
 				B092A71328EB92AD0032104D /* SongModel.swift in Sources */,
 				B092A70F28EB921D0032104D /* PlayerFullScreen.swift in Sources */,
